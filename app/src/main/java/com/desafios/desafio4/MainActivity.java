@@ -4,21 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-
-import java.io.File;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
 
-    private Button btn;
+    private Button btn,btn2;
     private ImageView img;
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
@@ -40,6 +37,20 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        btn2= (Button) this.findViewById(R.id.btn2);
+        btn2.setOnClickListener(new View.OnClickListener() {
+
+            if(resultCode==RESULT_OK){
+
+            intentExample();
+
+            }
+            else{
+                Toast.makeText(MainActivity.this, "Para avanzar tiene que sacar foto",Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     private void dispatchTakePictureIntent() {
@@ -57,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
            img.setImageBitmap(imageBitmap);
         }
     }
+
+    private void intentExample(){
+        Intent intent = new Intent(this, ResultActivity.class);
+        startActivity(intent);
+
 
 
 
