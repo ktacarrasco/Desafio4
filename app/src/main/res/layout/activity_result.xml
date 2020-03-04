@@ -6,4 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".ResultActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/imagenlogo"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/imagenlogo"
+            android:src="@drawable/ic_logodl" />
+
+
+
+        <Button
+            android:id="@+id/btnAbrirWeb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginBottom="8dp"
+            android:background="#E91E63"
+            android:paddingHorizontal="20dp"
+            android:text="Abrir WEB"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnCompartir"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginBottom="8dp"
+            android:background="#E91E63"
+            android:paddingHorizontal="20dp"
+            android:text="Compartir"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
